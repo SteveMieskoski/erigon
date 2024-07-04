@@ -343,6 +343,17 @@ func MainnetGenesisBlock() *types.Genesis {
 	}
 }
 
+func LocalGenesisBlock() *types.Genesis {
+	return &types.Genesis{
+		Config:     params.LocalChainConfig,
+		Nonce:      66,
+		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000123463a4b065722e99115d6c222f267d9cabb5240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),
+		GasLimit:   5000,
+		Difficulty: big.NewInt(17179869184),
+		Alloc:      readPrealloc("allocs/local.json"),
+	}
+}
+
 // HoleskyGenesisBlock returns the Holesky main net genesis block.
 func HoleskyGenesisBlock() *types.Genesis {
 	return &types.Genesis{
@@ -675,6 +686,8 @@ func GenesisBlockByChainName(chain string) *types.Genesis {
 		return GnosisGenesisBlock()
 	case networkname.ChiadoChainName:
 		return ChiadoGenesisBlock()
+	case networkname.Local:
+		return LocalGenesisBlock()
 	default:
 		return nil
 	}

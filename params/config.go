@@ -321,6 +321,7 @@ func isChainIDPoS(chainID *big.Int) bool {
 		SepoliaChainConfig.ChainID,
 		GnosisChainConfig.ChainID,
 		ChiadoChainConfig.ChainID,
+		LocalChainConfig.ChainID,
 	}
 	for _, id := range ids {
 		if id.Cmp(chainID) == 0 {

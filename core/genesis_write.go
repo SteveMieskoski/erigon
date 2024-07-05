@@ -346,10 +346,10 @@ func MainnetGenesisBlock() *types.Genesis {
 func LocalGenesisBlock() *types.Genesis {
 	return &types.Genesis{
 		Config:     params.LocalChainConfig,
-		Nonce:      66,
+		Nonce:      0,
 		ExtraData:  hexutil.MustDecode("0x0000000000000000000000000000000000000000000000000000000000000000123463a4b065722e99115d6c222f267d9cabb5240000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"),
 		GasLimit:   5000,
-		Difficulty: big.NewInt(17179869184),
+		Difficulty: big.NewInt(1),
 		Alloc:      readPrealloc("allocs/local.json"),
 	}
 }

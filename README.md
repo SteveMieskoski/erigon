@@ -161,7 +161,7 @@ Erigon by default is "all in one binary" solution, but it's possible start TxPoo
 Same true about: JSON RPC layer (RPCDaemon), p2p layer (Sentry), history download layer (Downloader), consensus.
 Don't start services as separated processes unless you have clear reason for it: resource limiting, scale, replace by
 your own implementation, security.
-How to start Erigon's services as separated processes, see in [docker-compose.yml](./docker-compose.yml).
+How to start Erigon's services as separated processes, see in [docker-compose.yml](./docker-compose_orig.yml).
 
 ### Embedded Consensus Layer
 
@@ -229,7 +229,7 @@ Windows users may run erigon in 3 possible ways:
   for `build\bin\mdbx\CMakeFiles` sub-folder of the cloned repo or you can run erigon using the following other two
   options
 
-* Use Docker :  see [docker-compose.yml](./docker-compose.yml)
+* Use Docker :  see [docker-compose.yml](./docker-compose_orig.yml)
 
 * Use WSL (Windows Subsystem for Linux) **strictly on version 2**. Under this option you can build Erigon just as you
   would on a regular Linux distribution. You can point your data also to any of the mounted Windows partitions (

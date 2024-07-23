@@ -207,6 +207,7 @@ func NewSnapshotConfig(checkpointInterval uint64, inmemorySnapshots int, inmemor
 	}
 }
 
+// TODO: need to get  config content to here
 func ChainConfigByChainName(chain string) *chain.Config {
 	switch chain {
 	case networkname.MainnetChainName:
